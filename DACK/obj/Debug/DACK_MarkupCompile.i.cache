@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Hung Nguyen\Documents\Visual Studio 2013\Projects\DACK\DACK\obj\Debug\
+D:\nguyen tien dung\DACK lap trinh window\quanLiBanHang_CSharp\DACK\obj\Debug\
 DACK
 none
 false
 DEBUG;TRACE
-C:\Users\Hung Nguyen\Documents\Visual Studio 2013\Projects\DACK\DACK\App.xaml
-11151548125
+D:\nguyen tien dung\DACK lap trinh window\quanLiBanHang_CSharp\DACK\App.xaml
+111014969957
 
-9344532601
-151774018873
-MainWindow.xaml;
+281893781968
+22-1037214231
+Bill\BillPage.xaml;Category\CategoryPage.xaml;Category\WindowAddCategory.xaml;Category\WindowEditCategory.xaml;Customer\CustomerPage.xaml;Customer\WindowAddCustomer.xaml;Customer\WindowEditCustomer.xaml;MainWindow.xaml;Product\ProductPage.xaml;Promotions\PromotionsPage.xaml;Statistic\StatisticPage.xaml;
 
 False
 

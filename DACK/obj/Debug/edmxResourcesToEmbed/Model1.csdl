@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="quan_li_ban_hangModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="bill">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idhoadon" Type="Int32" />
+    <Property Name="idproduct" Type="Int32" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="tiendathanhtoan" Type="Int64" />
+    <Property Name="ghichu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="realprice" Type="Int64" />
+    <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="curid">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="curidbill" Type="Int32" />
+    <Property Name="curidpromotions" Type="Int32" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="phonenumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="catid" Type="Int32" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="saleprice" Type="Int64" />
+    <Property Name="importprice" Type="Int64" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="promotion">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idpromotions" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="datefrom" Type="DateTime" Precision="0" />
+    <Property Name="dateto" Type="DateTime" Precision="0" />
+    <Property Name="idproduct" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="rate" Type="Int32" />
+    <Property Name="deleted" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="quan_li_ban_hangEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="bills" EntityType="Self.bill" />
+    <EntitySet Name="categories" EntityType="Self.category" />
+    <EntitySet Name="curids" EntityType="Self.curid" />
+    <EntitySet Name="customers" EntityType="Self.customer" />
+    <EntitySet Name="products" EntityType="Self.product" />
+    <EntitySet Name="promotions" EntityType="Self.promotion" />
+  </EntityContainer>
+</Schema>

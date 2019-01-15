@@ -8,15 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/access.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/add.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/blueg.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/delete.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/excel.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/new.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/save.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/server.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/statistics.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/user.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/coupon.png")]
 
 

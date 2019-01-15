@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="quan_li_ban_hangModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="bill">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idhoadon" Type="int" />
+    <Property Name="idproduct" Type="int" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="tiendathanhtoan" Type="bigint" />
+    <Property Name="ghichu" Type="nvarchar" MaxLength="50" />
+    <Property Name="date" Type="date" />
+    <Property Name="realprice" Type="bigint" />
+    <Property Name="state" Type="nvarchar" MaxLength="50" />
+    <Property Name="deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="curid">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="curidbill" Type="int" />
+    <Property Name="curidpromotions" Type="int" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="phonenumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+    <Property Name="deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="catid" Type="int" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="saleprice" Type="bigint" />
+    <Property Name="importprice" Type="bigint" />
+    <Property Name="date" Type="date" />
+    <Property Name="deleted" Type="int" />
+  </EntityType>
+  <EntityType Name="promotions">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idpromotions" Type="nchar" MaxLength="10" />
+    <Property Name="type" Type="nvarchar" MaxLength="50" />
+    <Property Name="datefrom" Type="date" />
+    <Property Name="dateto" Type="date" />
+    <Property Name="idproduct" Type="nvarchar" MaxLength="50" />
+    <Property Name="rate" Type="int" />
+    <Property Name="deleted" Type="int" />
+  </EntityType>
+  <EntityContainer Name="quan_li_ban_hangModelStoreContainer">
+    <EntitySet Name="bill" EntityType="Self.bill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="category" EntityType="Self.category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="curid" EntityType="Self.curid" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customer" EntityType="Self.customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="promotions" EntityType="Self.promotions" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

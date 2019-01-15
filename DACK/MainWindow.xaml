@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Phần mềm quản lí bán hàng" Height="350" Width="525" WindowState="Maximized" Loaded="RibbonWindow_Loaded">
     <DockPanel LastChildFill="True">
         <Fluent:Ribbon DockPanel.Dock="Top" Name="ribbon">
             <Fluent:Ribbon.Menu>
@@ -22,13 +22,7 @@
             <Fluent:RibbonTabItem Header="Category">
 
                 <Fluent:RibbonGroupBox Header="Operations">
-                    <Fluent:Button Name="btnAddCategory" Header="Add" LargeIcon="Images/Add.png" Width="80"></Fluent:Button>
-                </Fluent:RibbonGroupBox>
-                <Fluent:RibbonGroupBox Header="Operations">
-                    <Fluent:Button Name="btnDeleteCategory" Header="Delete" LargeIcon="Images/Delete.png" Width="80"></Fluent:Button>
-                </Fluent:RibbonGroupBox>
-                <Fluent:RibbonGroupBox Header="Operations">
-                    <Fluent:Button Name="btnUpdateCategory" Header="Update" LargeIcon="Images/Save.png" Width="80"></Fluent:Button>
+                    <Fluent:Button Name="btnAddCategory" Click="btnAddCategory_Click" Header="Add" LargeIcon="Images/Add.png" Width="80"></Fluent:Button>
                 </Fluent:RibbonGroupBox>
                 
             </Fluent:RibbonTabItem>
@@ -37,13 +31,13 @@
             <Fluent:RibbonTabItem Header="Product">
 
                 <Fluent:RibbonGroupBox Header="Operations">
-                    <Fluent:Button Name="btnAddProduct" Header="Add" LargeIcon="Images/Add.png"  Width="80"></Fluent:Button>
+                    <Fluent:Button Name="btnAddProduct" Click="btnAddProduct_Click" Header="Add" LargeIcon="Images/Add.png"  Width="80"></Fluent:Button>
                 </Fluent:RibbonGroupBox>
                 <Fluent:RibbonGroupBox Header="Operations">
                     <Fluent:Button Name="btnDeleteProduct" Header="Delete" LargeIcon="Images/Delete.png"  Width="80"></Fluent:Button>
                 </Fluent:RibbonGroupBox>
                 <Fluent:RibbonGroupBox Header="Operations">
-                    <Fluent:Button Name="btnUpdateProduct" Header="Update" LargeIcon="Images/Save.png"  Width="80"></Fluent:Button>
+                    <Fluent:Button Name="btnUpdateProduct" Header="Update" LargeIcon="Images/edit.png"  Width="80"></Fluent:Button>
                 </Fluent:RibbonGroupBox>
                 
             </Fluent:RibbonTabItem>
@@ -52,13 +46,7 @@
             <Fluent:RibbonTabItem Header="Customer">
 
                 <Fluent:RibbonGroupBox Header="Operations">
-                    <Fluent:Button Name="btnAddCustomer" Header="Add" LargeIcon="Images/Add.png"  Width="80"></Fluent:Button>
-                </Fluent:RibbonGroupBox>
-                <Fluent:RibbonGroupBox Header="Operations">
-                    <Fluent:Button Name="btnDeleteCustomer" Header="Delete" LargeIcon="Images/Delete.png"  Width="80"></Fluent:Button>
-                </Fluent:RibbonGroupBox>
-                <Fluent:RibbonGroupBox Header="Operations">
-                    <Fluent:Button Name="btnUpdateCustomer" Header="Update" LargeIcon="Images/Save.png"  Width="80"></Fluent:Button>
+                    <Fluent:Button Name="btnAddCustomer" Click="btnAddCustomer_Click" Header="Add" LargeIcon="Images/Add.png"  Width="80"></Fluent:Button>
                 </Fluent:RibbonGroupBox>
 
             </Fluent:RibbonTabItem>
@@ -73,12 +61,12 @@
                     <Fluent:Button Name="btnDeleteBill" Header="Delete" LargeIcon="Images/Delete.png"  Width="80"></Fluent:Button>
                 </Fluent:RibbonGroupBox>
                 <Fluent:RibbonGroupBox Header="Operations">
-                    <Fluent:Button Name="btnUpdateStateBill" Header="Update" LargeIcon="Images/Save.png"  Width="80"></Fluent:Button>
+                    <Fluent:Button Name="btnUpdateStateBill" Header="Update" LargeIcon="Images/edit.png"  Width="80"></Fluent:Button>
                 </Fluent:RibbonGroupBox>
                 
             </Fluent:RibbonTabItem>
-            
-            <!--Discount -->
+
+            <!--Promotions -->
             <Fluent:RibbonTabItem Header="Promotions">
 
                 <Fluent:RibbonGroupBox Header="Operations">
@@ -88,7 +76,10 @@
                     <Fluent:Button Name="btnDeletePromotions" Header="Delete" LargeIcon="Images/Delete.png"  Width="80"></Fluent:Button>
                 </Fluent:RibbonGroupBox>
                 <Fluent:RibbonGroupBox Header="Operations">
-                    <Fluent:Button Name="btnUpdatePromotions" Header="Update" LargeIcon="Images/Save.png"  Width="80"></Fluent:Button>
+                    <Fluent:Button Name="btnUpdatePromotions" Header="Update" LargeIcon="Images/edit.png"  Width="80"></Fluent:Button>
+                </Fluent:RibbonGroupBox>
+                <Fluent:RibbonGroupBox Header="Operations">
+                    <Fluent:Button Name="btnCreateCoupons" Header="Create coupons" LargeIcon="Images/coupon.png"  Width="80"></Fluent:Button>
                 </Fluent:RibbonGroupBox>
 
             </Fluent:RibbonTabItem>
@@ -97,10 +88,10 @@
             <Fluent:RibbonTabItem Header="Statistic">
 
                 <Fluent:RibbonGroupBox Header="Operations">
-                    <Fluent:Button Name="btnBySoldProduct" Header="By sold product" LargeIcon="Images/Add.png" Width="100"></Fluent:Button>
+                    <Fluent:Button Name="btnByProduct" Header="By product" LargeIcon="Images/product.png" Width="100"></Fluent:Button>
                 </Fluent:RibbonGroupBox>
                 <Fluent:RibbonGroupBox Header="Operations">
-                    <Fluent:Button Name="btnByRevenue" Header="By revenue" LargeIcon="Images/Delete.png" Width="100"></Fluent:Button>
+                    <Fluent:Button Name="btnByRevenue" Header="By revenue" LargeIcon="Images/income.png" Width="100"></Fluent:Button>
                 </Fluent:RibbonGroupBox>
                 
             </Fluent:RibbonTabItem>

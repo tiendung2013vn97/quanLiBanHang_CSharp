@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="quan_li_ban_hangModelStoreContainer" CdmEntityContainer="quan_li_ban_hangEntities1">
+    <EntitySetMapping Name="bills">
+      <EntityTypeMapping TypeName="quan_li_ban_hangModel.bill">
+        <MappingFragment StoreEntitySet="bill">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idhoadon" ColumnName="idhoadon" />
+          <ScalarProperty Name="idproduct" ColumnName="idproduct" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="tiendathanhtoan" ColumnName="tiendathanhtoan" />
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="realprice" ColumnName="realprice" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="quan_li_ban_hangModel.category">
+        <MappingFragment StoreEntitySet="category">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="curids">
+      <EntityTypeMapping TypeName="quan_li_ban_hangModel.curid">
+        <MappingFragment StoreEntitySet="curid">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="curidbill" ColumnName="curidbill" />
+          <ScalarProperty Name="curidpromotions" ColumnName="curidpromotions" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="customers">
+      <EntityTypeMapping TypeName="quan_li_ban_hangModel.customer">
+        <MappingFragment StoreEntitySet="customer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phonenumber" ColumnName="phonenumber" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="quan_li_ban_hangModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="catid" ColumnName="catid" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="saleprice" ColumnName="saleprice" />
+          <ScalarProperty Name="importprice" ColumnName="importprice" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="promotions">
+      <EntityTypeMapping TypeName="quan_li_ban_hangModel.promotion">
+        <MappingFragment StoreEntitySet="promotions">
+          <ScalarProperty Name="deleted" ColumnName="deleted" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idpromotions" ColumnName="idpromotions" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="datefrom" ColumnName="datefrom" />
+          <ScalarProperty Name="dateto" ColumnName="dateto" />
+          <ScalarProperty Name="idproduct" ColumnName="idproduct" />
+          <ScalarProperty Name="rate" ColumnName="rate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
